@@ -14,6 +14,8 @@ bkp_fsc/
 ├── config/ .claude/ specs/ manifest/ scripts/  # configuração do projeto
 ├── sfdx-project.json / package.json / jest.config.js
 ├── README_FSC.md                       # README original do FSC
+├── Salesforce Journey Designer/         # 100% de C:\Users\bruno\Documents\Salesforce Journey Designer (204M, docs/sdd, specs, prototipos.html)
+├── FSC_specs/                          # 100% de C:\Users\bruno\Documents\Salesforce Journey Developer\FSC\specs (905K, busca-cliente + household-360)
 └── docs/sessao-2026-09-09-visaoHeader360/  # export da sessão (Claude Code + testes manuais)
     ├── CONTEXTO.md                     # fatos vs hipóteses, estratégia SLDS, runtime Vlocity
     ├── visaoHeader360.claude.flexcard  # versão Claude Code — SLDS-only (sem style=), 14KB

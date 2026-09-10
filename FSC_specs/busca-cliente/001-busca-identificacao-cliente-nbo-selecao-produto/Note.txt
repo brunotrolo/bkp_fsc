@@ -1,0 +1,14 @@
+
+Digite	Cenário
+
+123.456.789-09	João — full + NBO Black + gate do hub
+12.ABC.345/0001-90 (modo PJ)	Empresa sem ofertas, hub libera direto
+987.654.321-00	Maria — só Holding, sem hub
+111.444.777-35	Carlos — NBO parcial, segue sem oferta
+529.982.247-25	Válido mas inexistente → "não localizado"|
+
+
+
+
+
+
