@@ -1,0 +1,56 @@
+.c-plan_titulo {
+    font-weight: 400;
+}
+
+.c-plan_regua {
+    position: relative;
+    display: flex;
+    gap: 2px;
+    height: 0.75rem;
+}
+
+.c-plan_etapa {
+    flex: 1 1 auto;
+    border-radius: 0.25rem;
+    background: #e5e5e5;
+}
+
+.c-plan_etapa_0,
+.c-plan_etapa_1,
+.c-plan_etapa_2 {
+    background: #1f9e6e;
+}
+
+.c-plan_marcador {
+    position: absolute;
+    top: -0.4rem;
+}
+
+.c-plan_estrela {
+    position: absolute;
+    right: 0;
+    top: -0.6rem;
+    color: #f5a623;
+}
+
+.c-plan_recomendacao {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.c-plan_recomendacao-icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.25rem;
+    background: #066afe;
+    flex: none;
+}
+
+.c-plan_recomendacao-titulo {
+    font-weight: 700;
+    color: #032d60;
+}

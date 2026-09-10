@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Chave de bypass dos handlers desta capacidade. Enquanto nenhum registro de nivel org existir, o codigo trata como bypass ativo (handlers inertes) ate a fundacao ratificar as regras.</description>
+    <label>Bypass de Trigger Busca Cliente</label>
+    <visibility>Public</visibility>
+</CustomObject>

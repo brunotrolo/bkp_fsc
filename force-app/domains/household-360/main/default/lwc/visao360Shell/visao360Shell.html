@@ -1,0 +1,205 @@
+<template>
+    <!-- Shell orquestrador — dono do estado da página: raiz (recordId),
+         aba ativa, cargas por área (Cen 15), ofertas NBO + retry (EL-03) e
+         troca de raiz vinda da árvore (RN-11, volta ao Resumo).
+         Layout: destaques no topo; abaixo, conteúdo das subabas à esquerda e
+         sidebar fixa (NBO + Tags) à direita, visível em todas as subabas.
+         Filhos independentes (1 bloco = 1 responsabilidade). -->
+
+    <!-- P1/P2 — faixa de destaques + perfil -->
+    <template lwc:if={carregandoVisao}>
+        <lightning-card title="Carregando visão do cliente…" icon-name="standard:contact" class="slds-m-bottom_small">
+            <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+                <lightning-spinner alternative-text="Carregando destaques do cliente" size="small"></lightning-spinner>
+                <div class="c-skeleton-bar c-skeleton-bar_titulo slds-size_3-of-5" aria-hidden="true"></div>
+                <div class="c-skeleton-bar" aria-hidden="true"></div>
+            </div>
+        </lightning-card>
+    </template>
+    <template lwc:elseif={visao}>
+
+        <div class="slds-grid slds-wrap slds-gutters slds-m-top_small">
+            <!-- Esquerda — subabas navegáveis -->
+            <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-3">
+                <div class="slds-tabs_default">
+                    <ul class="slds-tabs_default__nav" role="tablist" aria-label="Seções da visão do cliente">
+                        <template for:each={abas} for:item="aba">
+                            <li key={aba.id} class={aba.classe} role="presentation">
+                                <button
+                                    type="button"
+                                    class="slds-tabs_default__link"
+                                    role="tab"
+                                    aria-selected={aba.ativa}
+                                    data-id={aba.id}
+                                    onclick={aoTrocarAba}>
+                                    {aba.rotulo}
+                                </button>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+
+                <!-- Aba Resumo — KPIs, eventos, wellness/planejamento -->
+                <template lwc:if={ehAbaResumo}>
+                    <div class="slds-m-top_small">
+                        <c-visao360-resumo
+                            patrimonio={visao.patrimonioHousehold}
+                            aum={visao.aum}
+                            wallet-share={visao.walletShare}
+                            score-credito={visao.scoreCredito}
+                            completude={visao.completude}>
+                        </c-visao360-resumo>
+                    </div>
+                    <div class="slds-m-top_small">
+                        <c-visao360-eventos eventos={visao.eventosVida}></c-visao360-eventos>
+                    </div>
+                    <div class="slds-grid slds-wrap slds-gutters slds-m-top_small">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                            <c-visao360-wellness wellness={visao.wellness}></c-visao360-wellness>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                            <c-visao360-planejamento planejamento={visao.planejamento}></c-visao360-planejamento>
+                        </div>
+                    </div>
+                </template>
+
+                <!-- Aba Inteligência -->
+                <template lwc:if={ehAbaInteligencia}>
+                    <div class="slds-m-top_small">
+                        <c-visao360-inteligencia
+                            comportamento={visao.comportamento}
+                            campanhas={visao.campanhas}
+                            fluxo={visao.fluxo}
+                            segmentacao={visao.segmentacao}>
+                        </c-visao360-inteligencia>
+                    </div>
+                </template>
+
+                <!-- Aba Financial Accounts — totais + inventário + detalhes voláteis -->
+                <template lwc:if={ehAbaAccounts}>
+                    <div class="slds-m-top_small">
+                        <div class="slds-m-bottom_small">
+                            <c-visao360-contas-resumo
+                                aum={visao.aum}
+                                patrimonio={visao.patrimonioHousehold}
+                                ativos-fora={visao.ativosFora}
+                                total={totalAtivos}>
+                            </c-visao360-contas-resumo>
+                        </div>
+                        <template lwc:if={carregandoAtivos}>
+                            <lightning-card title="Produtos" icon-name="utility:card_details">
+                                <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+                                    <lightning-spinner alternative-text="Carregando inventário de ativos" size="small"></lightning-spinner>
+                                    <div class="c-skeleton-bar" aria-hidden="true"></div>
+                                    <div class="c-skeleton-bar slds-size_2-of-5" aria-hidden="true"></div>
+                                </div>
+                            </lightning-card>
+                        </template>
+                        <template lwc:else>
+                            <template lwc:if={erroAtivos}>
+                                <div class="slds-scoped-notification slds-media slds-media_center slds-scoped-notification_dark" role="alert">
+                                    <div class="slds-media__figure">
+                                        <lightning-icon icon-name="utility:warning" size="small" alternative-text="Inventário indisponível"></lightning-icon>
+                                    </div>
+                                    <div class="slds-media__body">
+                                        <p>{erroAtivos}</p>
+                                    </div>
+                                </div>
+                            </template>
+                            <template lwc:else>
+                                <c-visao360-ativos
+                                    ativos={ativos}
+                                    selecionado-id={selecionadoId}
+                                    onselecionar={aoSelecionarAtivo}>
+                                </c-visao360-ativos>
+                            </template>
+                        </template>
+                        <c-visao360-ativo-detalhe></c-visao360-ativo-detalhe>
+                    </div>
+                </template>
+
+                <!-- Aba Financial Goals -->
+                <template lwc:if={ehAbaGoals}>
+                    <div class="slds-m-top_small">
+                        <c-visao360-resumo
+                            patrimonio={visao.patrimonioHousehold}
+                            aum={visao.aum}
+                            wallet-share={visao.walletShare}
+                            score-credito={visao.scoreCredito}
+                            completude={visao.completude}>
+                        </c-visao360-resumo>
+                    </div>
+                    <div class="slds-m-top_small">
+                        <c-visao360-metas metas={visao.metas}></c-visao360-metas>
+                    </div>
+                </template>
+
+                <!-- Aba Relacionamentos -->
+                <template lwc:if={ehAbaRelacionamentos}>
+                    <div class="slds-m-top_small">
+                        <c-visao360-arc
+                            nos={visao.arcResumo}
+                            arvore={visao.arcCompleta}
+                            total-vinculos={visao.arcTotalVinculos}
+                            doc-atual={docAtual}
+                            raiz-nome={raizNome}
+                            ontrocarraiz={aoTrocarRaiz}>
+                        </c-visao360-arc>
+                    </div>
+                </template>
+
+                <!-- Aba Atividades -->
+                <template lwc:if={ehAbaAtividades}>
+                    <div class="slds-m-top_small">
+                        <c-visao360-proxima-acao acoes={visao.acoes}></c-visao360-proxima-acao>
+                    </div>
+                    <div class="slds-m-top_small">
+                        <c-visao360-tarefas tarefas={visao.tarefas}></c-visao360-tarefas>
+                    </div>
+                    <div class="slds-m-top_small">
+                        <c-visao360-atividades interacoes={visao.interacoes}></c-visao360-atividades>
+                        <div class="slds-m-top_small">
+                            <c-visao360-historico casos={visao.casos}></c-visao360-historico>
+                        </div>
+                    </div>
+                </template>
+            </div>
+
+            <!-- Direita — sidebar fixa em todas as subabas (NBO + Tags) -->
+            <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+                <template lwc:if={nboPronto}>
+                    <c-visao360-nbo
+                        ofertas={ofertas}
+                        erro={nboErro}
+                        motor={nboMotor}
+                        onrecusar={aoRecusarOferta}
+                        oncontratar={aoContratarOferta}
+                        ontentar={aoTentarNbo}>
+                    </c-visao360-nbo>
+                </template>
+                <div class="slds-m-top_small">
+                    <c-visao360-tags
+                        segmentos={visao.tagsSegmentos}
+                        investimentos={visao.tagsInvestimentos}
+                        estilo={visao.tagsEstilo}>
+                    </c-visao360-tags>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template lwc:else>
+        <template lwc:if={erroVisao}>
+            <div class="slds-scoped-notification slds-media slds-media_center slds-scoped-notification_dark" role="alert">
+                <div class="slds-media__figure">
+                    <lightning-icon icon-name="utility:warning" size="small" alternative-text="Falha parcial"></lightning-icon>
+                </div>
+                <div class="slds-media__body">
+                    <p>{erroVisao} O restante da tela continua navegável.</p>
+                </div>
+            </div>
+        </template>
+        <template lwc:else>
+            <p class="slds-text-body_small slds-p-around_medium">Visão indisponível para esta conta.</p>
+        </template>
+    </template>
+</template>

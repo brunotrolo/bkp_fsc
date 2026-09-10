@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HoldingInformative__c</fullName>
+    <description>Indica vinculo Holding de visibilidade apenas informativa, sem selecao transacional (RN-06).</description>
+    <inlineHelpText>Marcado para itens do bloco informativo Holding.</inlineHelpText>
+    <label>Holding Informativo</label>
+    <defaultValue>false</defaultValue>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Porto Bank 360</masterLabel>
+    <description>Canal interno de household-360/001: selecao de ativo no inventario -&gt; painel de detalhe volatil. Interno ao dominio; nunca cross-domain (distinto de CustomerInteractionChannel__c da busca). Evento: ASSET_SELECTED.</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <fieldName>assetId</fieldName>
+        <description>Id do Asset selecionado no inventario.</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>contractNumber</fieldName>
+        <description>Numero do contrato externo (ExternalContractId__c) para a consulta volatil sob demanda.</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>productFamily</fieldName>
+        <description>Familia do produto: CARTAO, CONTA, CONSORCIO ou INVEST.</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>status</fieldName>
+        <description>Situacao do ativo (Ativo, Bloqueado, Cancelado, Encerrado) para leitura reduzida em falha parcial.</description>
+    </lightningMessageFields>
+</LightningMessageChannel>

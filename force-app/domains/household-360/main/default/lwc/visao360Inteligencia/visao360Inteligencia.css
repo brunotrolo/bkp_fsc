@@ -1,0 +1,45 @@
+.c-grafico-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-subabas {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.c-subaba {
+    background: #f3f3f3;
+    border: 1px solid #c9c9c9;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    cursor: pointer;
+    font-size: 0.8125rem;
+}
+
+.c-subaba_ativa {
+    background: #066afe;
+    border-color: #066afe;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.c-tabela-rolavel {
+    overflow-x: auto;
+}
+
+.c-linha-detalhe td {
+    background: #f3f3f3;
+}
+
+.c-ver-tudo {
+    background: none;
+    border: none;
+    color: #066afe;
+    cursor: pointer;
+    font-size: 0.8125rem;
+    margin-top: 0.5rem;
+    text-decoration: underline;
+    padding: 0;
+}

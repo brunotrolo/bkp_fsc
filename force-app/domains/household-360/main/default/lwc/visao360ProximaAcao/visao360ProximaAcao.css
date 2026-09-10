@@ -1,0 +1,24 @@
+.c-nba-item {
+    border: 1px solid #e5e5e5;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.c-nba-item_topo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.c-nba-item_titulo {
+    font-weight: 700;
+    color: #032d60;
+    flex: 1 1 auto;
+}
+
+.c-nba-item_iniciada {
+    font-weight: 700;
+    color: #056764;
+}

@@ -1,0 +1,72 @@
+.c-detalhe {
+    background: #ffffff;
+    border: 1px solid #c9c9c9;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+}
+
+.c-detalhe_cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.c-detalhe_titulo {
+    font-weight: 700;
+    color: #032d60;
+    margin: 0;
+}
+
+.c-detalhe-skeleton {
+    height: 0.75rem;
+    border-radius: 0.25rem;
+    background: #e5e5e5;
+    margin-top: 0.5rem;
+}
+
+.c-detalhe_aviso {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background: #fef3e2;
+    border-radius: 0.25rem;
+    font-size: 0.8125rem;
+}
+
+.c-detalhe_grade {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.25rem 1rem;
+    margin-top: 0.5rem;
+}
+
+.c-detalhe_grade dt {
+    font-size: 0.75rem;
+    color: #5c5c5c;
+}
+
+.c-detalhe_grade dd {
+    margin: 0;
+    font-size: 0.8125rem;
+}
+
+.c-detalhe_valor {
+    font-weight: 700;
+    color: #032d60;
+}
+
+.c-detalhe_linha {
+    font-size: 0.8125rem;
+}
+
+.c-detalhe_rotulo {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #032d60;
+}
+
+.c-detalhe_pix {
+    margin: 0.25rem 0 0 1rem;
+    list-style: disc;
+    font-size: 0.8125rem;
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProfileCompleteness__c</fullName>
+    <description>Percentual de completude cadastral do cliente (ex.: 80). Exibido no resumo do perfil da Visao 360 (T-A04, Cen 18).</description>
+    <inlineHelpText>Percentual de completude do cadastro do cliente.</inlineHelpText>
+    <label>Completude do Cadastro</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Percent</type>
+</CustomField>

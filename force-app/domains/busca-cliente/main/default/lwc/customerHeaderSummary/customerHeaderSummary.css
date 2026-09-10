@@ -1,0 +1,50 @@
+.c-cliente-card {
+    background: #ffffff;
+    border: 1px solid #c9c9c9;
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+
+.c-cliente-card_header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.c-cliente-card_titulos {
+    flex: 1;
+}
+
+.c-cliente-card_nome {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.c-cliente-card_sub {
+    color: #444444;
+}
+
+.c-cliente-card_badge {
+    font-weight: 700;
+}
+
+.c-cliente-card_bloco {
+    background: #f3f3f3;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.c-cliente-card_rotulo {
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #444444;
+}
+
+.c-cliente-card_linha {
+    margin-top: 0.125rem;
+}
+
+.c-cliente-card_linha--destaque {
+    font-weight: 700;
+}

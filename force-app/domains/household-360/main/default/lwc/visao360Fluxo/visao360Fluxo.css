@@ -1,0 +1,55 @@
+.c-chart {
+    height: 100%;
+}
+
+.c-fluxo_svg svg {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+}
+
+.c-fluxo_grade {
+    stroke: #e5e5e5;
+    stroke-width: 1;
+}
+
+.c-fluxo_eixo {
+    font-size: 10px;
+    fill: #5c5c5c;
+}
+
+.c-fluxo_entrada {
+    fill: #1f9e6e;
+}
+
+.c-fluxo_saida {
+    fill: #e94e77;
+}
+
+.c-fluxo_legenda {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.c-fluxo_legenda-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.c-fluxo_cor {
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 2px;
+}
+
+.c-fluxo_cor-entrada {
+    background: #1f9e6e;
+}
+
+.c-fluxo_cor-saida {
+    background: #e94e77;
+}

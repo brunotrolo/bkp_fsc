@@ -1,0 +1,1 @@
+Map<String,Object> m = new Map<String,Object>{'recordId'=>'001Ws000061PPpDIAW'}; Map<String,Object> r = Visao360FlexCardDS.getHeader(m); System.debug('FLEX=' + JSON.serialize(r));

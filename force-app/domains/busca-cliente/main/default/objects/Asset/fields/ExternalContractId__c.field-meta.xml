@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ExternalContractId__c</fullName>
+    <description>Identificador do contrato ou vinculo na fonte corporativa de origem. Chave de upsert idempotente dos vinculos Porto Bank e Holding (RN-11, EL-11).</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Id externo do contrato na origem. Usado como chave de upsert idempotente.</inlineHelpText>
+    <label>Id Externo do Contrato</label>
+    <length>36</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

@@ -1,0 +1,9 @@
+.c-tarefas_item {
+    margin-top: 0.5rem;
+}
+
+.c-tarefas_item-meta {
+    font-size: 0.75rem;
+    color: #5c5c5c;
+    margin-left: 1.5rem;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AccountPlanObjMeasCalcDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <conditions>
+        <fieldName>StageName</fieldName>
+        <operation>Equals</operation>
+        <value>Closed Won</value>
+    </conditions>
+    <description>Defina objetivos de receita de vendas. O valor do objetivo atual é a soma dos campos valor das suas oportunidades selecionadas que estão na fase &apos;Fechado e ganho&apos;.</description>
+    <developerName>Objetivos_de_receita_de_oportunidade</developerName>
+    <masterLabel>Objetivos de receita de oportunidade</masterLabel>
+    <rollupType>Sum</rollupType>
+    <status>Draft</status>
+    <targetField>Amount</targetField>
+    <targetObject>Opportunity</targetObject>
+</AccountPlanObjMeasCalcDef>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Risco__c</fullName>
+    <description>Nivel de risco da posicao de investimento, exibido no modal de sub-selecao (Cenario 18).</description>
+    <inlineHelpText>Nivel de risco da posicao.</inlineHelpText>
+    <label>Risco</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Baixo</fullName>
+                <default>true</default>
+                <label>Baixo</label>
+            </value>
+            <value>
+                <fullName>Moderado</fullName>
+                <default>false</default>
+                <label>Moderado</label>
+            </value>
+            <value>
+                <fullName>Alto</fullName>
+                <default>false</default>
+                <label>Alto</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

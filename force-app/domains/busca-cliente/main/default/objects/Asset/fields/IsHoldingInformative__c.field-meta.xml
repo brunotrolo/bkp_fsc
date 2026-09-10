@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsHoldingInformative__c</fullName>
+    <description>Indica vinculo da Holding Porto Seguro de visibilidade apenas informativa, sem selecao transacional nesta jornada (RN-06, P5).</description>
+    <inlineHelpText>Marcado para vinculos Holding exibidos somente para leitura.</inlineHelpText>
+    <label>Holding Informativo</label>
+    <defaultValue>false</defaultValue>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

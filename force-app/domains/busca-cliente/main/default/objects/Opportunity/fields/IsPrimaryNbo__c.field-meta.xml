@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsPrimaryNbo__c</fullName>
+    <description>Indica a oferta em destaque quando ha multiplas elegiveis. Placeholder neutro: a regra de priorizacao (premissa 04) ainda sem decisao; por padrao segue a ordem do motor.</description>
+    <inlineHelpText>Marcado na oferta exibida em destaque.</inlineHelpText>
+    <label>Oferta NBO Principal</label>
+    <defaultValue>false</defaultValue>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

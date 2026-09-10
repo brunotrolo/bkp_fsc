@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Propensity_Score__c</fullName>
+    <description>Score de propensao do motor NBO para esta oferta (0-100, ex.: 92). Alimenta a ordenacao top 3 e a barra de score do painel NBO da Visao 360 (T-A02, Cen 10, 25).</description>
+    <inlineHelpText>Score de propensao do motor (0 a 100).</inlineHelpText>
+    <label>Score de Propensao</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Number</type>
+</CustomField>

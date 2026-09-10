@@ -1,0 +1,1 @@
+List<OmniUiCard> cards = [SELECT Id, IsActive FROM OmniUiCard WHERE Name = 'visaoHeader360']; Integer n=0; for(OmniUiCard c : cards){ if(c.IsActive){ c.IsActive=false; n++; } } update cards; System.debug('DEACTIVATED=' + n);

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CustomerSegment__c</fullName>
+    <description>Faixa ou segmento de relacionamento do cliente no Porto Bank, exibido na faixa de identificacao (P3). Premissa aberta LGPD: visibilidade por perfil a ratificar com a fundacao.</description>
+    <inlineHelpText>Segmento comercial do cliente (exibicao informativa na faixa de identificacao).</inlineHelpText>
+    <label>Segmento do Cliente</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>VAREJO</fullName>
+                <default>true</default>
+                <label>Varejo</label>
+            </value>
+            <value>
+                <fullName>ALTA_RENDA</fullName>
+                <default>false</default>
+                <label>Alta Renda</label>
+            </value>
+            <value>
+                <fullName>CORPORATE</fullName>
+                <default>false</default>
+                <label>Corporate</label>
+            </value>
+            <value>
+                <fullName>EXCLUSIVO</fullName>
+                <default>false</default>
+                <label>Exclusivo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

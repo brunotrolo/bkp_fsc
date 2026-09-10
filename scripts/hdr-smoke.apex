@@ -1,0 +1,1 @@
+System.Callable c=(System.Callable)new Visao360FlexCardDS(); Map<String,Object> a=new Map<String,Object>{'input'=>new Map<String,Object>{'recordId'=>'001Ws000061PPpDIAW'},'output'=>new Map<String,Object>{},'options'=>new Map<String,Object>{}}; Object r=c.call('getHeader',a); System.debug('HDR='+JSON.serialize(r));

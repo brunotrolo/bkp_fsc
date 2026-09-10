@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Chave do modo mock da jornada busca-cliente/001. DESLIGADO por padrao (testes e operacao real passam longe); ligar cria-se UM registro de nivel org com UsarMock__c=true. Temporario ate o barramento real responder.</description>
+    <label>Mock Busca Cliente</label>
+    <visibility>Public</visibility>
+</CustomObject>

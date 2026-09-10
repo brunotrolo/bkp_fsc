@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UsarMock__c</fullName>
+    <description>Quando marcado no nivel org, os services da Visao 360 retornam fixtures do prototipo validado em vez de chamar motor NBO e core bancario. Default desligado: sem registro, o codigo segue o caminho real.</description>
+    <inlineHelpText>Ativa o modo mock da Visao 360.</inlineHelpText>
+    <label>Usar Mock</label>
+    <defaultValue>false</defaultValue>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

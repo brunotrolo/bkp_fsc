@@ -1,0 +1,112 @@
+<template>
+    <!-- Shell orquestrador: busca → carregando → resultado/erro + gate NBO. -->
+    <template lwc:if={toastVisivel}>
+        <div class="slds-notify_container slds-is-fixed">
+            <div class="slds-notify slds-notify_toast slds-theme_error" role="status">
+                <span class="slds-assistive-text">erro</span>
+                <lightning-icon icon-name="utility:error" size="small" variant="inverse" alternative-text="Erro"></lightning-icon>
+                <div class="slds-notify__content">
+                    <h2 class="slds-text-heading_small">{toastTitulo}</h2>
+                    <p>{toastMensagem}</p>
+                </div>
+                <div class="slds-notify__close">
+                    <lightning-button-icon icon-name="utility:close" variant="bare-inverse" size="medium" alternative-text="Fechar" onclick={fecharToast}></lightning-button-icon>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <c-customer-search-bar></c-customer-search-bar>
+
+    <template lwc:if={mostrarCarregamento}>
+        <lightning-card title="Localizando cliente…" icon-name="standard:search" class="slds-m-top_small">
+            <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+                <lightning-spinner alternative-text="Carregando dados do cliente" size="small"></lightning-spinner>
+                <template lwc:if={carregandoCadastro}>
+                    <div class="c-skeleton-bar c-skeleton-bar_titulo slds-size_3-of-5" aria-hidden="true"></div>
+                    <div class="c-skeleton-bar" aria-hidden="true"></div>
+                </template>
+                <template lwc:if={carregandoHub}>
+                    <div class="c-skeleton-bar" aria-hidden="true"></div>
+                    <div class="c-skeleton-bar slds-size_2-of-5" aria-hidden="true"></div>
+                </template>
+                <template lwc:if={carregandoNbo}>
+                    <div class="c-skeleton-bar slds-size_2-of-5" aria-hidden="true"></div>
+                </template>
+                <p class="slds-text-body_small slds-m-top_x-small">Buscando cadastro, produtos e ofertas em paralelo…</p>
+            </div>
+        </lightning-card>
+    </template>
+
+    <template lwc:if={mostrarNaoEncontrado}>
+        <lightning-card class="slds-m-top_small">
+            <div class="slds-p-horizontal_medium slds-p-bottom_medium slds-text-align_center">
+                <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-center slds-m-bottom_small">
+                    <lightning-icon icon-name="standard:search" size="small" alternative-text="Não localizado"></lightning-icon>
+                    <h2 class="slds-text-heading_small slds-m-left_x-small">Nenhum cadastro localizado</h2>
+                </div>
+                <p>Nenhum cadastro foi localizado para o documento informado. Confira os dígitos e tente novamente.</p>
+                <div class="slds-m-top_x-large">
+                    <lightning-button label="Nova busca" variant="neutral" onclick={aoLimpar}></lightning-button>
+                </div>
+            </div>
+        </lightning-card>
+    </template>
+
+    <template lwc:if={mostrarErroTotal}>
+        <lightning-card class="slds-m-top_small">
+            <div class="slds-p-horizontal_medium slds-p-bottom_medium slds-text-align_center">
+                <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-center slds-m-bottom_small">
+                    <lightning-icon icon-name="utility:warning" size="small" alternative-text="Aviso"></lightning-icon>
+                    <h2 class="slds-text-heading_small slds-m-left_x-small">Fontes indisponíveis</h2>
+                </div>
+                <p>As fontes corporativas estão temporariamente indisponíveis. O documento digitado foi preservado — tente novamente em instantes.</p>
+                <div class="slds-m-top_x-large">
+                    <lightning-button label="Tentar novamente" variant="brand" onclick={aoTentarNovamente}></lightning-button>
+                </div>
+            </div>
+        </lightning-card>
+    </template>
+
+    <template lwc:if={mostrarResultado}>
+        <c-customer-header-summary
+            cliente={cliente}
+            icone-tipo-pessoa={iconeTipoPessoa}>
+        </c-customer-header-summary>
+
+        <c-nbo-banner
+            oferta-ativa={ofertaAtiva}
+            mostrar-oferta-em-abordagem={mostrarOfertaEmAbordagem}
+            mostrar-oferta-dispensada={mostrarOfertaDispensada}
+            mostrar-aviso-ofertas-indisponiveis={mostrarAvisoOfertasIndisponiveis}
+            onabordar={aoAbordarOferta}
+            ondispensar={aoDispensarOferta}>
+        </c-nbo-banner>
+
+        <template lwc:if={mostrarGateProdutos}>
+            <div class="slds-m-top_small slds-p-around_medium c-gate" role="status">
+                <lightning-icon icon-name="utility:lock" size="x-small" alternative-text="Bloqueado"></lightning-icon>
+                <span class="slds-m-left_x-small">Selecione <strong>Abordar venda</strong> ou <strong>Dispensar</strong> na oportunidade acima para liberar os produtos.</span>
+            </div>
+        </template>
+
+        <template lwc:if={mostrarHub}>
+            <!-- Seleção chega via LMS (PRODUCT_SELECTED), sem @api pai-filho. -->
+            <c-product-hub produtos={cliente.produtos}></c-product-hub>
+        </template>
+
+        <template lwc:if={temHolding}>
+            <c-holding-strip holding={cliente.holding}></c-holding-strip>
+        </template>
+
+        <template lwc:if={contextoFixado}>
+            <lightning-card title="Contexto de atendimento fixado" icon-name="standard:contact" class="slds-m-top_small">
+                <div class="slds-p-horizontal_medium slds-p-bottom_medium" aria-live="polite">
+                    <p>{contextoFixado.resumo}</p>
+                    <p class="slds-text-body_small slds-m-top_x-small">Identificação encerrada — pronto para a próxima etapa do atendimento.</p>
+                    <lightning-button label="Nova busca (F2)" variant="neutral" onclick={aoLimpar} class="slds-m-top_small"></lightning-button>
+                </div>
+            </lightning-card>
+        </template>
+    </template>
+</template>

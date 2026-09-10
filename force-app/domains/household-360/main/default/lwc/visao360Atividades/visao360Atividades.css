@@ -1,0 +1,74 @@
+.c-timeline-filtros {
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.c-timeline-filtro {
+    background: #f3f3f3;
+    border: 1px solid #c9c9c9;
+    border-radius: 999px;
+    padding: 0.25rem 0.75rem;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+.c-timeline-filtro_ativo {
+    background: #066afe;
+    border-color: #066afe;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.c-timeline-grade {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 0.5rem;
+}
+
+@media (min-width: 48em) {
+    .c-timeline-grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.c-timeline-cartao {
+    border: 1px solid #e5e5e5;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    background: #ffffff;
+}
+
+.c-timeline-cartao_topo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.c-timeline-cartao_quando {
+    margin-left: auto;
+}
+
+.c-timeline-detalhes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.c-timeline-vermais {
+    background: none;
+    border: none;
+    color: #066afe;
+    cursor: pointer;
+    font-size: 0.8125rem;
+    text-decoration: underline;
+    padding: 0;
+    margin-top: 0.25rem;
+}
+
+.c-timeline-rodape {
+    margin-top: 0.5rem;
+}

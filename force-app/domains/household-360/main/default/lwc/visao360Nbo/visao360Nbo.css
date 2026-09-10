@@ -1,0 +1,57 @@
+.c-nbo-motor {
+    font-size: 0.75rem;
+    color: #5c5c5c;
+    margin-bottom: 0.5rem;
+}
+
+.c-nbo-oferta {
+    border: 1px solid #c9c9c9;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    background: #ffffff;
+}
+
+.c-nbo-oferta_topo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.c-nbo-oferta_produto {
+    font-weight: 700;
+    color: #032d60;
+}
+
+.c-nbo-oferta_condicao {
+    margin-top: 0.5rem;
+    font-size: 0.8125rem;
+}
+
+.c-nbo-oferta_meta {
+    font-size: 0.75rem;
+    color: #5c5c5c;
+}
+
+.c-nbo-oferta_motivos {
+    margin-top: 0.5rem;
+    font-size: 0.8125rem;
+}
+
+.c-nbo-oferta_motivos-rotulo {
+    font-weight: 700;
+    color: #032d60;
+}
+
+.c-nbo-oferta_motivos ul {
+    margin: 0.25rem 0 0 1rem;
+    list-style: disc;
+}
+
+.c-nbo-oferta_reserva {
+    margin-top: 0.5rem;
+    font-weight: 700;
+    color: #056764;
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>66.0</apiVersion>
+    <description>Detalhe volátil do ativo da Visão 360 (assina o LMS, sub-abas paralelas).</description>
+    <isExposed>false</isExposed>
+</LightningComponentBundle>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InvestClasse__c</fullName>
+    <description>Classe da posicao de investimento (renda fixa, renda variavel, CDB, fundos), exibida no modal (Cenario 18).</description>
+    <inlineHelpText>Classe do ativo de investimento.</inlineHelpText>
+    <label>Classe de Investimento</label>
+    <length>30</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,51 @@
+.c-ativo {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: #ffffff;
+    border: 1px solid #c9c9c9;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+.c-ativo_selecionado {
+    border: 2px solid #066afe;
+}
+
+.c-prod_topo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.c-prod_titulos {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.c-prod_nome {
+    font-weight: 700;
+    color: #032d60;
+}
+
+.c-prod_numero {
+    font-size: 0.75rem;
+    color: #5c5c5c;
+}
+
+.c-prod_relatorio {
+    font-size: 0.75rem;
+    color: #066afe;
+    text-decoration: underline;
+}
+
+.c-prod_grade {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.25rem 1rem;
+    margin-top: 0.5rem;
+}

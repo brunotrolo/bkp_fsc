@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NboStatus__c</fullName>
+    <description>Estado da oferta no ciclo de vida desta jornada: identificada, em abordagem, dispensada ou expirada (RN-14, Cenarios 14 e 15).</description>
+    <inlineHelpText>Estado atual da oferta no ciclo de vida.</inlineHelpText>
+    <label>Status NBO</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Elegivel</fullName>
+                <default>true</default>
+                <label>Elegivel</label>
+            </value>
+            <value>
+                <fullName>Abordada</fullName>
+                <default>false</default>
+                <label>Abordada</label>
+            </value>
+            <value>
+                <fullName>Dispensada</fullName>
+                <default>false</default>
+                <label>Dispensada</label>
+            </value>
+            <value>
+                <fullName>Expirada</fullName>
+                <default>false</default>
+                <label>Expirada</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

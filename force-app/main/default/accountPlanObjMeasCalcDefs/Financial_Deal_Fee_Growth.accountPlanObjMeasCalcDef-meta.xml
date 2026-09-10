@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AccountPlanObjMeasCalcDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <conditions>
+        <fieldName>Status</fieldName>
+        <operation>NotEqual</operation>
+        <value>Inactive</value>
+    </conditions>
+    <description>Define fee revenue goals. The current goal value is the sum of the Total Expected Fee fields of your selected financial deals that don&apos;t have a Status of &apos;Inactive&apos;.</description>
+    <developerName>Financial_Deal_Fee_Growth</developerName>
+    <masterLabel>Financial Deal Fee Growth</masterLabel>
+    <rollupType>Sum</rollupType>
+    <status>Active</status>
+    <targetField>TotalExpectedFee</targetField>
+    <targetObject>FinancialDeal</targetObject>
+</AccountPlanObjMeasCalcDef>

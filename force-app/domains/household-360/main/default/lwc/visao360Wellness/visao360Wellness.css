@@ -1,0 +1,49 @@
+.c-wellness_titulo {
+    font-weight: 400;
+}
+
+.c-wellness_corpo {
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.c-wellness_nota-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.c-wellness_nota {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #032d60;
+}
+
+.c-wellness_variacao {
+    font-size: 0.75rem;
+    color: #1f9e6e;
+}
+
+.c-wellness_grafico {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    height: 5rem;
+    flex: 1 1 auto;
+}
+
+.c-wellness_barra {
+    flex: 1 1 auto;
+    background: #5aa9ff;
+    border-radius: 2px 2px 0 0;
+    min-height: 2px;
+}
+
+.c-wellness_media {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top: 2px dashed #7a4fd0;
+}

@@ -1,0 +1,145 @@
+<template>
+    <!-- P5 — detalhe volátil por tipo com sub-abas paralelas (Cen 16),
+         skeleton (Cen 8), banner + retry + leitura reduzida (Cen 9).
+         Assina o LMS do domínio; busca via Apex; cache 180s em memória. -->
+    <template lwc:if={temDetalhes}>
+        <div class="slds-tabs_scoped slds-m-top_small" role="tablist" aria-label="Detalhes de ativos em paralelo">
+            <ul class="slds-tabs_scoped__nav">
+                <template for:each={abasApresentacao} for:item="aba">
+                    <li key={aba.chave} class={aba.classeAba} role="presentation">
+                        <button
+                            type="button"
+                            class="slds-tabs_scoped__link"
+                            role="tab"
+                            aria-selected={aba.ativa}
+                            data-id={aba.chave}
+                            onclick={aoFocarDetalhe}>
+                            {aba.rotulo}
+                        </button>
+                        <lightning-button-icon
+                            icon-name="utility:clear"
+                            alternative-text="Fechar detalhe"
+                            title="Fechar detalhe"
+                            data-id={aba.chave}
+                            onclick={aoFecharDetalhe}>
+                        </lightning-button-icon>
+                    </li>
+                </template>
+            </ul>
+        </div>
+        <div class="slds-grid slds-wrap slds-gutters">
+            <template for:each={abasApresentacao} for:item="aba">
+                <div key={aba.chave} class={tamanhoPainelDetalhe}>
+                    <div class="c-detalhe slds-m-top_small" aria-live="polite">
+                        <div class="c-detalhe_cabecalho">
+                            <h3 class="c-detalhe_titulo">{aba.rotulo}</h3>
+                            <lightning-button-icon
+                                icon-name="utility:clear"
+                                alternative-text="Fechar detalhe"
+                                title="Fechar detalhe"
+                                data-id={aba.chave}
+                                onclick={aoFecharDetalhe}>
+                            </lightning-button-icon>
+                        </div>
+
+                        <template lwc:if={aba.mostrarCarregando}>
+                            <lightning-spinner alternative-text="Consultando dados em tempo real" size="small"></lightning-spinner>
+                            <div class="c-detalhe-skeleton" aria-hidden="true"></div>
+                            <div class="c-detalhe-skeleton" aria-hidden="true"></div>
+                        </template>
+
+                        <template lwc:if={aba.mostrarErro}>
+                            <div class="slds-scoped-notification slds-media slds-media_center slds-scoped-notification_dark slds-m-top_x-small" role="alert">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="utility:warning" size="small" alternative-text="Falha na consulta"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                    <p>{aba.erro} Os dados cadastrais seguem em leitura reduzida — o resto da tela continua navegável.</p>
+                                </div>
+                            </div>
+                            <p class="c-detalhe_linha slds-m-top_x-small">{aba.rotulo} • {aba.status}</p>
+                            <lightning-button
+                                label="Tentar Novamente"
+                                variant="brand"
+                                icon-name="utility:sync"
+                                data-id={aba.chave}
+                                onclick={aoRecarregarDetalhe}
+                                class="slds-m-top_x-small">
+                            </lightning-button>
+                        </template>
+
+                        <template lwc:if={aba.mostrarDetalhe}>
+                            <template lwc:if={aba.detalhe.aviso}>
+                                <p class="c-detalhe_aviso">{aba.detalhe.aviso}</p>
+                            </template>
+
+                            <template lwc:if={aba.ehCartao}>
+                                <dl class="c-detalhe_grade">
+                                    <div><dt>Limite total</dt><dd>{aba.detalhe.limiteTotal}</dd></div>
+                                    <div><dt>Limite disponível</dt><dd>{aba.detalhe.limiteDisponivel}</dd></div>
+                                    <div><dt>Fatura atual</dt><dd>{aba.detalhe.faturaAtual}</dd></div>
+                                    <div><dt>Vencimento</dt><dd>{aba.detalhe.vencimento}</dd></div>
+                                    <div><dt>Melhor dia de compra</dt><dd>{aba.detalhe.melhorDiaCompra}</dd></div>
+                                </dl>
+                            </template>
+
+                            <template lwc:if={aba.ehConta}>
+                                <dl class="c-detalhe_grade">
+                                    <div><dt>Saldo em conta</dt><dd class="c-detalhe_valor">{aba.detalhe.saldo}</dd></div>
+                                    <div><dt>Agência / Conta</dt><dd>{aba.detalhe.agenciaConta}</dd></div>
+                                </dl>
+                                <div class="c-detalhe_rotulo slds-m-top_x-small">Chaves PIX (mascaradas)</div>
+                                <ul class="c-detalhe_pix">
+                                    <template for:each={aba.detalhe.chavesPix} for:item="chave">
+                                        <li key={chave}>{chave}</li>
+                                    </template>
+                                </ul>
+                            </template>
+
+                            <template lwc:if={aba.ehConsorcio}>
+                                <dl class="c-detalhe_grade">
+                                    <div><dt>Grupo / Cota</dt><dd>{aba.detalhe.grupoCota}</dd></div>
+                                    <div><dt>Saldo devedor</dt><dd class="c-detalhe_valor">{aba.detalhe.saldoDevedor}</dd></div>
+                                    <div><dt>Parcela</dt><dd>{aba.detalhe.parcela}</dd></div>
+                                    <div><dt>Próxima assembleia</dt><dd>{aba.detalhe.proximaAssembleia}</dd></div>
+                                    <div><dt>Contemplação</dt><dd>{aba.detalhe.contemplacao}</dd></div>
+                                </dl>
+                            </template>
+
+                            <template lwc:if={aba.ehInvest}>
+                                <dl class="c-detalhe_grade">
+                                    <div><dt>Produto</dt><dd>{aba.detalhe.produto}</dd></div>
+                                    <div><dt>Valor aplicado</dt><dd class="c-detalhe_valor">{aba.detalhe.valorAplicado}</dd></div>
+                                    <div><dt>Rentabilidade</dt><dd>{aba.detalhe.rentabilidade}</dd></div>
+                                    <div><dt>Vencimento / Resgate</dt><dd>{aba.detalhe.vencimento}</dd></div>
+                                </dl>
+                            </template>
+
+                            <p class="slds-text-body_small slds-m-top_x-small">
+                                Atualizado às {aba.horaAtualizacao}<template lwc:if={aba.veioDoCache}> (cache de 180s)</template> — vale o dado em tempo real, sem sobrescrever cadastro.
+                            </p>
+                            <lightning-button
+                                label="Recarregar"
+                                variant="neutral"
+                                icon-name="utility:sync"
+                                data-id={aba.chave}
+                                onclick={aoRecarregarDetalhe}
+                                class="slds-m-top_x-small">
+                            </lightning-button>
+                        </template>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </template>
+    <template lwc:if={mostrarPlaceholder}>
+        <div class="slds-scoped-notification slds-media slds-media_center slds-scoped-notification_light slds-m-top_small" role="status">
+            <div class="slds-media__figure">
+                <lightning-icon icon-name="action:info" size="small" alternative-text="Nenhum ativo selecionado"></lightning-icon>
+            </div>
+            <div class="slds-media__body">
+                <p>Selecione um ativo no inventário para ver saldos, limites e demais dados em tempo real.</p>
+            </div>
+        </div>
+    </template>
+</template>

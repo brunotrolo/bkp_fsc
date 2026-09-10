@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MaritalStatus__c</fullName>
+    <description>Estado civil do cliente pessoa fisica. Exibido no resumo do perfil da Visao 360 (T-A04, Cen 18). Para PJ, manter em branco.</description>
+    <inlineHelpText>Estado civil declarado do cliente.</inlineHelpText>
+    <label>Estado Civil</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Solteiro</fullName>
+                <default>false</default>
+                <label>Solteiro</label>
+            </value>
+            <value>
+                <fullName>Solteira</fullName>
+                <default>false</default>
+                <label>Solteira</label>
+            </value>
+            <value>
+                <fullName>Casado</fullName>
+                <default>false</default>
+                <label>Casado</label>
+            </value>
+            <value>
+                <fullName>Casada</fullName>
+                <default>false</default>
+                <label>Casada</label>
+            </value>
+            <value>
+                <fullName>Divorciado</fullName>
+                <default>false</default>
+                <label>Divorciado</label>
+            </value>
+            <value>
+                <fullName>Divorciada</fullName>
+                <default>false</default>
+                <label>Divorciada</label>
+            </value>
+            <value>
+                <fullName>Viuvo</fullName>
+                <default>false</default>
+                <label>Viúvo</label>
+            </value>
+            <value>
+                <fullName>Viuva</fullName>
+                <default>false</default>
+                <label>Viúva</label>
+            </value>
+            <value>
+                <fullName>Uniao Estavel</fullName>
+                <default>false</default>
+                <label>Uniao Estavel</label>
+            </value>
+            <value>
+                <fullName>Outro</fullName>
+                <default>false</default>
+                <label>Outro</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

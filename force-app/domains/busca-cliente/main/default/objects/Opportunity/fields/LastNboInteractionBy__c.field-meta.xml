@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LastNboInteractionBy__c</fullName>
+    <description>Operador que abordou ou dispensou a oferta por ultimo. Completa a trilha de auditoria com ApproachTimestamp__c (premissa 13).</description>
+    <inlineHelpText>Usuario da ultima interacao com a oferta.</inlineHelpText>
+    <label>Ultima Interacao Por</label>
+    <referenceTo>User</referenceTo>
+    <relationshipLabel>Ofertas NBO Interagidas</relationshipLabel>
+    <relationshipName>NboInteractions</relationshipName>
+    <required>false</required>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Lookup</type>
+</CustomField>

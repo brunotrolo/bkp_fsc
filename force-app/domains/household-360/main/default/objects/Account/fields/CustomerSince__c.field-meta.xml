@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CustomerSince__c</fullName>
+    <description>Data de inicio do relacionamento do cliente com o Porto Bank. Exibida no resumo do perfil da Visao 360 (cliente desde) e base do tempo de relacionamento (T-A04, Cen 18).</description>
+    <inlineHelpText>Data em que o cliente iniciou o relacionamento com o banco.</inlineHelpText>
+    <label>Cliente Desde</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Date</type>
+</CustomField>

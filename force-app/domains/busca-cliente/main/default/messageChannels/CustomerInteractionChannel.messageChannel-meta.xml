@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Customer Interaction</masterLabel>
+    <description>Canal interno de busca-cliente/001: barra, faixa, hub, banner NBO e modais. Nao e contrato cross-domain.</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <fieldName>type</fieldName>
+        <description>Tipo do evento: CUSTOMER_SEARCH_TRIGGERED, CUSTOMER_IDENTIFIED, NBO_OFFERS_AVAILABLE, NBO_EMPTY, PRODUCT_SELECTED, CARD_SELECTED, COTA_SELECTED, INVESTIMENTO_SELECTED, INTERACTION_CONTEXT_FIXED, NBO_APPROACHED, NBO_DISMISSED.</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>documentNormalized</fieldName>
+        <description>Documento normalizado da busca (chave idempotente).</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>modo</fieldName>
+        <description>Modo de busca: PF, PJ, PROTOCOLO ou NAO_CLIENTE.</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>productType</fieldName>
+        <description>Tipo de produto selecionado no hub (PRODUCT_SELECTED).</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>itemId</fieldName>
+        <description>Identificador externo do item de sub-selecao (via, cota ou posicao).</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>payload</fieldName>
+        <description>Carga complementar do evento em texto.</description>
+    </lightningMessageFields>
+</LightningMessageChannel>

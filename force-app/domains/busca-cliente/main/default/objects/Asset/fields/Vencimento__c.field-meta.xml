@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vencimento__c</fullName>
+    <description>Vencimento ou liquidez da posicao de investimento em formato legivel (ex.: Vence em 12/2027, Resgate D+1), exibido no modal (Cenario 18).</description>
+    <inlineHelpText>Vencimento ou regra de resgate da posicao.</inlineHelpText>
+    <label>Vencimento ou Liquidez</label>
+    <length>40</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

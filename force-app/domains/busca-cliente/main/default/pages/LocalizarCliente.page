@@ -1,0 +1,15 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0" title="Localizar Cliente">
+    <apex:slds />
+    <apex:includeLightning />
+    <div id="localizar-cliente-host" class="slds-scope"></div>
+    <script>
+        $Lightning.use('c:buscaClienteOutApp', function () {
+            $Lightning.createComponent(
+                'c:customerSearchShell',
+                {},
+                'localizar-cliente-host',
+                function (cmp) {}
+            );
+        });
+    </script>
+</apex:page>

@@ -1,0 +1,1 @@
+Id acc=[SELECT Id FROM Account WHERE Document__c='12345678900' LIMIT 1].Id; System.debug('SMOKE360 visao=' + (Visao360Controller.getVisao(acc) != null) + ' assets=' + Visao360Controller.getAssets(acc).items.size() + ' offers=' + Visao360Controller.getOffers(acc, false).offers.size());

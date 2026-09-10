@@ -1,0 +1,157 @@
+.c-arc-raiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.c-arc-raiz_no {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    color: #032d60;
+}
+
+.c-arc-raiz_nome {
+    font-size: 1rem;
+}
+
+.c-arc-fio {
+    width: 2px;
+    height: 1rem;
+    background: #c9c9c9;
+}
+
+.c-arc-add {
+    background: none;
+    border: 1px dashed #c9c9c9;
+    border-radius: 0.25rem;
+    color: #5c5c5c;
+    cursor: not-allowed;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.c-arc-grupos {
+    margin-top: 0.5rem;
+}
+
+.c-arc-grupo {
+    position: relative;
+    border: 1px solid #c9c9c9;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    background: #ffffff;
+}
+
+.c-arc-grupo_stub {
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    width: 2px;
+    height: 0.5rem;
+    background: #c9c9c9;
+}
+
+.c-arc-grupo_recolher {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.c-arc-grupo_topo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.c-arc-grupo_titulo {
+    font-weight: 700;
+    color: #032d60;
+}
+
+.c-arc-grupo_sub {
+    font-size: 0.75rem;
+    color: #5c5c5c;
+}
+
+.c-arc-grupo_selo {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #066afe;
+    background: #e8f1ff;
+    border-radius: 999px;
+    padding: 0 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.c-arc-membros {
+    list-style: none;
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+}
+
+.c-arc-no {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    cursor: pointer;
+    text-align: left;
+}
+
+.c-arc-no_selecionado {
+    border-color: #066afe;
+    border-width: 2px;
+}
+
+.c-arc-membro_barra {
+    width: 4px;
+    align-self: stretch;
+    border-radius: 2px;
+    background: #c9c9c9;
+    flex: none;
+}
+
+.c-arc-membro_barra_principal {
+    background: #066afe;
+}
+
+.c-arc-membro_barra_vinculo {
+    background: #1f9e6e;
+}
+
+.c-arc-membro_textos {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.c-arc-membro_nome {
+    font-weight: 700;
+    font-size: 0.8125rem;
+}
+
+.c-arc-membro_papel {
+    font-size: 0.75rem;
+    color: #5c5c5c;
+}
+
+.c-arc-detalhe {
+    font-size: 0.8125rem;
+}
+
+.c-arc-acoes {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}

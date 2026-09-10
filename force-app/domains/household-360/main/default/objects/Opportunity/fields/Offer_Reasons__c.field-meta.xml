@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Offer_Reasons__c</fullName>
+    <description>Motivos "por que esta oferta" vindos do motor (um por linha). Exibidos em cada card do painel NBO e persistidos para auditoria da safra (T-A02, Cen 10, 25).</description>
+    <inlineHelpText>Motivos de elegibilidade informados pelo motor.</inlineHelpText>
+    <label>Motivos da Oferta</label>
+    <length>4000</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

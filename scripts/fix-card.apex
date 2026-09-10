@@ -1,0 +1,1 @@
+OmniUiCard c = [SELECT Id FROM OmniUiCard WHERE Name = 'visaoHeader360' LIMIT 1]; c.IsActive = false; update c; c.UniqueName = 'visaoHeader360_FSC_1'; c.IsManagedUsingStdDesigner = true; c.AuthorName = 'FSC'; c.OmniUiCardKey = 'visaoHeader360/FSC/1.0'; update c; c.IsActive = true; update c; System.debug('FIXED=' + c.UniqueName + ' active=' + c.IsActive);

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsTitular__c</fullName>
+    <description>Indica se a via pertence ao titular (marcado) ou a portador adicional (desmarcado), para distincao no modal (Cenario 20).</description>
+    <inlineHelpText>Marcado quando a via e do titular; desmarcado para adicional.</inlineHelpText>
+    <label>Via do Titular</label>
+    <defaultValue>false</defaultValue>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

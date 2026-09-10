@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AccountPlanObjMeasCalcDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <conditions>
+        <fieldName>Status</fieldName>
+        <operation>NotEqual</operation>
+        <value>Inactive</value>
+    </conditions>
+    <description>Defina objetivos de receita de transação. O valor do objetivo atual é a soma dos campos Valor da transação das seus acordos financeiros selecionados que não têm o estado &apos;Inativo&apos;.</description>
+    <developerName>Metas_de_receita_do_acordo_financeiro</developerName>
+    <masterLabel>Metas de receita do acordo financeiro</masterLabel>
+    <rollupType>Sum</rollupType>
+    <status>Active</status>
+    <targetField>TransactionValue</targetField>
+    <targetObject>FinancialDeal</targetObject>
+</AccountPlanObjMeasCalcDef>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last4__c</fullName>
+    <description>Ultimos 4 digitos do plastico. Armazena apenas os 4 digitos; a exibicao mascarada e responsabilidade do LWC (LGPD, sem PAN completo).</description>
+    <inlineHelpText>Ultimos 4 digitos do cartao (somente digitos).</inlineHelpText>
+    <label>Final do Cartao</label>
+    <length>4</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Asset_Last4_Format</fullName>
+    <active>true</active>
+    <description>Garante que o final do cartao contenha exatamente 4 digitos quando informado. So dispara para registros da jornada (Last4__c preenchido).</description>
+    <errorConditionFormula>AND(NOT(ISBLANK(Last4__c)), NOT(REGEX(Last4__c, "[0-9]{4}")))</errorConditionFormula>
+    <errorMessage>O final do cartao deve conter exatamente 4 digitos.</errorMessage>
+</ValidationRule>

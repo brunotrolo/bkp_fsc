@@ -1,0 +1,20 @@
+.c-holding-card {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    background: #f3f3f3;
+    border: 1px solid #c9c9c9;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.c-holding-card_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-holding-card_badge {
+    font-size: 0.75rem;
+    color: #444444;
+    text-transform: uppercase;
+}

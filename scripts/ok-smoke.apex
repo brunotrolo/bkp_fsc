@@ -1,0 +1,1 @@
+System.Callable c = (System.Callable)new Visao360FlexCardDS(); Object r = c.call('getHeader', new Map<String,Object>{'recordId'=>'001Ws000061PPpDIAW'}); System.debug('OK=' + JSON.serialize(r));

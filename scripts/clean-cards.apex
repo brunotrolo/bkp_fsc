@@ -1,0 +1,1 @@
+List<OmniUiCard> cards=[SELECT Id FROM OmniUiCard WHERE Name='visaoHeader360' AND IsActive=false]; delete cards; System.debug('CLEANED=' + cards.size()); List<OmniUiCard> ativos=[SELECT Id,VersionNumber FROM OmniUiCard WHERE Name='visaoHeader360' AND IsActive=true]; for(OmniUiCard a:ativos){ System.debug('ATIVO v='+a.VersionNumber+' '+a.Id); }

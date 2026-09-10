@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Offer_Safra__c</fullName>
+    <description>Periodo comercial da safra no formato AAAA-MM (ex.: 2026-09). Compõe, com documento e codigo do produto, a chave de idempotencia {doc}_{cod}_{periodo} (T-A02, RN-06).</description>
+    <inlineHelpText>Safra comercial da oferta (AAAA-MM).</inlineHelpText>
+    <label>Safra da Oferta</label>
+    <length>7</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+</CustomField>

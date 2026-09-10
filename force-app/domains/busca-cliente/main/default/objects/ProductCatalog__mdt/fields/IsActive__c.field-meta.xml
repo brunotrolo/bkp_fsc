@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsActive__c</fullName>
+    <description>Indica que o tipo de produto participa do hub. Desmarcar remove o cartao sem deploy.</description>
+    <inlineHelpText>Marcado para produtos visiveis no hub.</inlineHelpText>
+    <label>Ativo</label>
+    <defaultValue>true</defaultValue>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

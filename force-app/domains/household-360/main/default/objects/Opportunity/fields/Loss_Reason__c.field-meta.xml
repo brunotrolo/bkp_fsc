@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loss_Reason__c</fullName>
+    <description>Motivo de recusa (1 clique: sem interesse / achou caro / ja possui) ou de expiracao da safra. Gravado pelo NBORejectQueueable e pelo sync de expiracao (T-A02, Cen 11, 12).</description>
+    <inlineHelpText>Motivo da recusa ou expiracao da oferta.</inlineHelpText>
+    <label>Motivo da Perda</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+</CustomField>

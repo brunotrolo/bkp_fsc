@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ExpirationDate__c</fullName>
+    <description>Validade da oferta da safra vigente. Ofertas vencidas passam a Closed Lost com motivo de expiracao na sincronizacao em segundo plano (T-A02, Cen 11, RN-06).</description>
+    <inlineHelpText>Data de validade da oferta.</inlineHelpText>
+    <label>Validade da Oferta</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Date</type>
+</CustomField>

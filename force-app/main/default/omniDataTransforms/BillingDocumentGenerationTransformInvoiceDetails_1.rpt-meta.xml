@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;AccountEmail&quot; : &quot;Text&quot;,
+  &quot;CompanyEmail&quot; : &quot;Text&quot;,
+  &quot;TotalAmnt&quot; : &quot;Text&quot;,
+  &quot;ShippingState&quot; : &quot;Text&quot;,
+  &quot;CompanyPostalCode&quot; : &quot;Text&quot;,
+  &quot;InvoiceLine&quot; : {
+    &quot;Products&quot; : {
+      &quot;Tax&quot; : &quot;Text&quot;,
+      &quot;StartDate&quot; : &quot;Text&quot;,
+      &quot;EndDate&quot; : &quot;Text&quot;,
+      &quot;Subtotal&quot; : &quot;Text&quot;,
+      &quot;ProductName&quot; : &quot;Text&quot;,
+      &quot;UnitPrice&quot; : &quot;Text&quot;,
+      &quot;Quantity&quot; : &quot;Text&quot;
+    }
+  },
+  &quot;ShippingStreet&quot; : &quot;Text&quot;,
+  &quot;Logo&quot; : &quot;Text&quot;,
+  &quot;CompanyContact&quot; : &quot;Text&quot;,
+  &quot;CompanyStreet&quot; : &quot;Text&quot;,
+  &quot;CompanyName&quot; : &quot;Text&quot;,
+  &quot;ShippingCountry&quot; : &quot;Text&quot;,
+  &quot;InvoiceDate&quot; : &quot;Text&quot;,
+  &quot;AccountContact&quot; : &quot;Text&quot;,
+  &quot;ShippingCity&quot; : &quot;Text&quot;,
+  &quot;TotalTax&quot; : &quot;Text&quot;,
+  &quot;TotalTaxesCapturedAtHeader&quot; : &quot;Text&quot;,
+  &quot;CompanyCountry&quot; : &quot;Text&quot;,
+  &quot;ShippingPostalCode&quot; : &quot;Text&quot;,
+  &quot;CompanyCity&quot; : &quot;Text&quot;,
+  &quot;CompanyState&quot; : &quot;Text&quot;,
+  &quot;BillingPostalCode&quot; : &quot;Text&quot;,
+  &quot;InvoiceDueDate&quot; : &quot;Text&quot;,
+  &quot;BillingCity&quot; : &quot;Text&quot;,
+  &quot;BillingState&quot; : &quot;Text&quot;,
+  &quot;InvoiceNumber&quot; : &quot;Text&quot;,
+  &quot;BillingCountry&quot; : &quot;Text&quot;,
+  &quot;AccountName&quot; : &quot;Text&quot;,
+  &quot;SubTotal&quot; : &quot;Text&quot;,
+  &quot;BillingStreet&quot; : &quot;Text&quot;
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>94435a44-bb61-4d20-9b6a-2adae8249bdf</globalKey>
+        <inputFieldName>BillingPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZBxz</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZBxz</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>BillingPostalCode</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>f7ef4fe4-59af-4ab2-918e-c7c4fecc4875</globalKey>
+        <inputFieldName>CompanyEmail</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZBxy</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZBxy</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>CompanyEmail</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>45ad740f-6621-40ef-b600-3f09826c6102</globalKey>
+        <inputFieldName>CompanyStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZByK</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZByK</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>CompanyStreet</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2ff23141-9f26-4450-b743-a9b3dca6871d</globalKey>
+        <inputFieldName>ShippingCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZByJ</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZByJ</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ShippingCity</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>33073f1e-6b2a-4f62-bb98-3ad28b7adf5c</globalKey>
+        <inputFieldName>CompanyContact</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZByM</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZByM</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>CompanyContact</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>966fbdfc-2113-4352-914c-3cd3b0e3c70c</globalKey>
+        <inputFieldName>ShippingState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZByL</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZByL</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ShippingState</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>f52c0bd2-05c2-44d3-832f-26ffeb4e432c</globalKey>
+        <inputFieldName>BillingCountry</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZByN</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZByN</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BillingCountry</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>6994b125-03a3-46b6-a352-46d57f7129fe</globalKey>
+        <inputFieldName>InvoiceNumber</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZBxr</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZBxr</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>InvoiceNumber</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2c32b1e8-409f-4935-97f9-2b2a9e0c815f</globalKey>
+        <inputFieldName>NetCreditsApplied</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZBxq</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZBxq</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>NetCreditsApplied</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2ca21551-9cfe-4e77-93ba-1a50a2c892dc</globalKey>
+        <inputFieldName>ShippingCountry</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZBxt</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZBxt</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ShippingCountry</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>478f3e25-c465-4ba1-9aa1-1812d303469a</globalKey>
+        <inputFieldName>SubTotal</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZBxs</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZBxs</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>SubTotal</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>81c361d5-c480-4907-8aaf-25c6deb2689b</globalKey>
+        <inputFieldName>AccountEmail</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZBxv</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZBxv</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AccountEmail</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>446a7d2a-ba7d-4a0d-99b5-7c3e50d96040</globalKey>
+        <inputFieldName>BillingState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZBxu</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZBxu</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BillingState</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>218e475f-eb63-4e00-8b4a-9b0dba46263f</globalKey>
+        <inputFieldName>ShippingPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZBxx</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZBxx</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ShippingPostalCode</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>9f342e4c-46d7-4dc7-9e19-53a5ea27aa4c</globalKey>
+        <inputFieldName>CompanyCountry</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZBxw</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZBxw</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>CompanyCountry</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>ab1a46ec-85b7-4655-8c75-d5546b81b102</globalKey>
+        <inputFieldName>BillingCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZByA</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZByA</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BillingCity</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>d684370a-7b75-4da2-9bfe-af8c993e3c5b</globalKey>
+        <inputFieldName>Logo</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZByC</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZByC</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>IMG_CompanyLogo:src</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>cfc77785-7b2a-4be2-9f97-e27d4bb2d41f</globalKey>
+        <inputFieldName>ShippingStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZByB</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZByB</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ShippingStreet</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>8fc61a72-b8ec-4582-ab1d-492db2a458a0</globalKey>
+        <inputFieldName>BillingStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZByE</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZByE</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BillingStreet</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>1c693dbf-59ce-4810-ba69-1c788ed5aa48</globalKey>
+        <inputFieldName>CompanyState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZByD</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZByD</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>CompanyState</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>ac49e76b-7cc0-4559-b8d4-84afef7b6a1b</globalKey>
+        <inputFieldName>InvoiceLines</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZByG</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZByG</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Object</outputFieldFormat>
+        <outputFieldName>InvoiceLines</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>1bd143b3-2398-4d0a-ab67-097be64e3ee3</globalKey>
+        <inputFieldName>CompanyCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZByF</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZByF</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>CompanyCity</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>03a3f5b3-551f-4e81-8153-96817346e618</globalKey>
+        <inputFieldName>DocumentNumber</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZByI</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZByI</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>DocumentNumber</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>bf1d660b-5845-4ccf-a85b-a7b3d518092e</globalKey>
+        <inputFieldName>InvoiceDueDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZByH</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZByH</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Date(MM/dd/yyyy)</outputFieldFormat>
+        <outputFieldName>InvoiceDueDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>a0f66581-70f4-434f-883a-023147dcbdcb</globalKey>
+        <inputFieldName>TotalAmnt</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZBy1</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZBy1</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>TotalAmnt</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>ec84a23c-e875-456f-aa66-56d87e64e9bb</globalKey>
+        <inputFieldName>CompanyName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZBy0</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZBy0</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>CompanyName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>7dfe666e-33eb-4771-9dad-68179a12c28f</globalKey>
+        <inputFieldName>TotalTaxesCapturedAtHeader</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZBy3</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZBy3</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>TotalTaxesCapturedAtHeader</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>bdcb8bc6-df2e-4bb9-b7d2-fa20eb08a8af</globalKey>
+        <inputFieldName>TotalTax</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZBy2</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZBy2</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>TotalTax</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| &apos;invoice_docgen.InvoiceDocumentGeneration&apos; &apos;InvoiceLineCustom&apos; var:InvoiceLine | var:ILR LIST | var:Products LIST | var:UnitOfMeasure LIST FUNCTION</formulaConverted>
+        <formulaExpression>FUNCTION(&apos;invoice_docgen.InvoiceDocumentGeneration&apos;, &apos;InvoiceLineCustom&apos;,InvoiceLine,LIST(%ILR%),LIST(%Products%),LIST(%UnitOfMeasure%))</formulaExpression>
+        <formulaResultPath>InvoiceLines</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>40ab96bc-bcdd-4800-b3b8-143b4b6a6c68</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZBy5</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZBy5</omniDataTransformationId>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>371713a4-0181-4aff-ac2c-675c2326bf0f</globalKey>
+        <inputFieldName>AccountName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZBy4</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZBy4</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AccountName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>9ba6783f-f2eb-4256-b8b0-ed53f4351cfa</globalKey>
+        <inputFieldName>logo_height</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZBy7</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZBy7</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>IMG_CompanyLogo:height</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>9faf1c66-b978-4d6c-9d20-b539b2352547</globalKey>
+        <inputFieldName>InvoiceDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZBy6</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZBy6</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Date(MM/dd/yyyy)</outputFieldFormat>
+        <outputFieldName>InvoiceDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>86cc7255-a842-4af8-aff7-c0320683b1e9</globalKey>
+        <inputFieldName>AccountContact</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZBy9</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZBy9</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>AccountContact</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>dafcd04d-6f70-4125-b8f7-e8659b5d86f7</globalKey>
+        <inputFieldName>CompanyPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>BillingDocumentGenerationTransformInvoiceDetails</name>
+        <omniDataTransformation>0kdWs000002ZBy8</omniDataTransformation>
+        <omniDataTransformationId>0kdWs000002ZBy8</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>CompanyPostalCode</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <overrideKey>invoice_dataraptor__BillingDocumentGenerationTransformInvoiceDetails_1</overrideKey>
+    <previewJsonData>{
+  &quot;Products&quot; : [ {
+    &quot;Id&quot; : &quot;01tVW0000022VgtYAE&quot;,
+    &quot;UsageProductName&quot; : &quot;API Access Premium&quot;
+  }, {
+    &quot;Id&quot; : &quot;01tVW0000022VgtYAE&quot;,
+    &quot;UsageProductName&quot; : &quot;API Access Premium&quot;
+  }, {
+    &quot;Id&quot; : &quot;01tVW0000022VgtYAE&quot;,
+    &quot;UsageProductName&quot; : &quot;API Access Premium&quot;
+  }, {
+    &quot;Id&quot; : &quot;01tVW0000022VgtYAE&quot;,
+    &quot;UsageProductName&quot; : &quot;API Access Premium&quot;
+  }, {
+    &quot;Id&quot; : &quot;01tVW0000022VgtYAE&quot;,
+    &quot;UsageProductName&quot; : &quot;API Access Premium&quot;
+  }, {
+    &quot;Id&quot; : &quot;01tVW0000022VgtYAE&quot;,
+    &quot;UsageProductName&quot; : &quot;API Access Premium&quot;
+  }, {
+    &quot;Id&quot; : &quot;01tVW0000022VgtYAE&quot;,
+    &quot;UsageProductName&quot; : &quot;API Access Premium&quot;
+  } ],
+  &quot;NetCreditsApplied&quot; : &quot;$0.00&quot;,
+  &quot;UnitOfMeasure&quot; : [ {
+    &quot;UnitOfMeasureName&quot; : &quot;GB&quot;,
+    &quot;Id&quot; : &quot;0hEVW0000000Hk72AE&quot;
+  }, {
+    &quot;UnitOfMeasureName&quot; : &quot;LOGS&quot;,
+    &quot;Id&quot; : &quot;0hEVW0000000HkB2AU&quot;
+  }, {
+    &quot;UnitOfMeasureName&quot; : &quot;CALLS&quot;,
+    &quot;Id&quot; : &quot;0hEVW0000000HkC2AU&quot;
+  }, {
+    &quot;UnitOfMeasureName&quot; : &quot;SESH&quot;,
+    &quot;Id&quot; : &quot;0hEVW0000000HkD2AU&quot;
+  }, {
+    &quot;UnitOfMeasureName&quot; : &quot;TPS&quot;,
+    &quot;Id&quot; : &quot;0hEVW0000000HkE2AU&quot;
+  } ],
+  &quot;InvoiceLine&quot; : {
+    &quot;Products&quot; : [ {
+      &quot;StartDate&quot; : &quot;03/25/2025&quot;,
+      &quot;IsUsageBasedInvoiceLine&quot; : false,
+      &quot;UnitPrice&quot; : &quot;$75.00&quot;,
+      &quot;ProductName&quot; : &quot;API Access Premium&quot;,
+      &quot;Subtotal&quot; : &quot;$82.50&quot;,
+      &quot;Quantity&quot; : &quot;1&quot;,
+      &quot;Tax&quot; : &quot;$7.50&quot;,
+      &quot;Id&quot; : &quot;5TVVW0000000GuP4AU&quot;,
+      &quot;CurrencyIsoCode&quot; : &quot;USD&quot;,
+      &quot;EndDate&quot; : &quot;04/24/2025&quot;
+    }, {
+      &quot;StartDate&quot; : &quot;04/25/2025&quot;,
+      &quot;IsUsageBasedInvoiceLine&quot; : false,
+      &quot;UnitPrice&quot; : &quot;$75.00&quot;,
+      &quot;ProductName&quot; : &quot;API Access Premium&quot;,
+      &quot;Subtotal&quot; : &quot;$82.50&quot;,
+      &quot;Quantity&quot; : &quot;1&quot;,
+      &quot;Tax&quot; : &quot;$7.50&quot;,
+      &quot;Id&quot; : &quot;5TVVW0000000GuQ4AU&quot;,
+      &quot;CurrencyIsoCode&quot; : &quot;USD&quot;,
+      &quot;EndDate&quot; : &quot;05/24/2025&quot;
+    }, {
+      &quot;UsageProductId&quot; : &quot;01tVW0000022VgtYAE&quot;,
+      &quot;ProductName&quot; : &quot;Data Transfers&quot;,
+      &quot;Subtotal&quot; : &quot;$61.60&quot;,
+      &quot;Quantity&quot; : &quot;5&quot;,
+      &quot;Tax&quot; : &quot;$5.60&quot;,
+      &quot;CurrencyIsoCode&quot; : &quot;USD&quot;,
+      &quot;EndDate&quot; : &quot;04/24/2025&quot;,
+      &quot;StartDate&quot; : &quot;03/25/2025&quot;,
+      &quot;IsUsageBasedInvoiceLine&quot; : true,
+      &quot;UnitPrice&quot; : &quot;$0.00&quot;,
+      &quot;UsageOverageQuantity&quot; : &quot;0&quot;,
+      &quot;UnitOfMeasureId&quot; : &quot;0hEVW0000000Hk72AE&quot;,
+      &quot;Id&quot; : &quot;5TVVW0000000GuR4AU&quot;
+    }, {
+      &quot;UsageProductId&quot; : &quot;01tVW0000022VgtYAE&quot;,
+      &quot;ProductName&quot; : &quot;User Sessions&quot;,
+      &quot;Subtotal&quot; : &quot;$13.20&quot;,
+      &quot;Quantity&quot; : &quot;6&quot;,
+      &quot;Tax&quot; : &quot;$1.20&quot;,
+      &quot;CurrencyIsoCode&quot; : &quot;USD&quot;,
+      &quot;EndDate&quot; : &quot;04/24/2025&quot;,
+      &quot;StartDate&quot; : &quot;03/25/2025&quot;,
+      &quot;IsUsageBasedInvoiceLine&quot; : true,
+      &quot;UnitPrice&quot; : &quot;$0.00&quot;,
+      &quot;UsageOverageQuantity&quot; : &quot;0&quot;,
+      &quot;UnitOfMeasureId&quot; : &quot;0hEVW0000000HkD2AU&quot;,
+      &quot;Id&quot; : &quot;5TVVW0000000GuS4AU&quot;
+    }, {
+      &quot;UsageProductId&quot; : &quot;01tVW0000022VgtYAE&quot;,
+      &quot;ProductName&quot; : &quot;Rate Limits&quot;,
+      &quot;Subtotal&quot; : &quot;$5.50&quot;,
+      &quot;Quantity&quot; : &quot;3&quot;,
+      &quot;Tax&quot; : &quot;$0.50&quot;,
+      &quot;CurrencyIsoCode&quot; : &quot;USD&quot;,
+      &quot;EndDate&quot; : &quot;04/24/2025&quot;,
+      &quot;StartDate&quot; : &quot;03/25/2025&quot;,
+      &quot;IsUsageBasedInvoiceLine&quot; : true,
+      &quot;UnitPrice&quot; : &quot;$0.00&quot;,
+      &quot;UsageOverageQuantity&quot; : &quot;0&quot;,
+      &quot;UnitOfMeasureId&quot; : &quot;0hEVW0000000HkE2AU&quot;,
+      &quot;Id&quot; : &quot;5TVVW0000000GuT4AU&quot;
+    }, {
+      &quot;UsageProductId&quot; : &quot;01tVW0000022VgtYAE&quot;,
+      &quot;ProductName&quot; : &quot;Rate Limits&quot;,
+      &quot;Subtotal&quot; : &quot;$69.30&quot;,
+      &quot;Quantity&quot; : &quot;2&quot;,
+      &quot;Tax&quot; : &quot;$6.30&quot;,
+      &quot;CurrencyIsoCode&quot; : &quot;USD&quot;,
+      &quot;EndDate&quot; : &quot;05/24/2025&quot;,
+      &quot;StartDate&quot; : &quot;04/25/2025&quot;,
+      &quot;IsUsageBasedInvoiceLine&quot; : true,
+      &quot;UnitPrice&quot; : &quot;$0.00&quot;,
+      &quot;UsageOverageQuantity&quot; : &quot;0&quot;,
+      &quot;UnitOfMeasureId&quot; : &quot;0hEVW0000000HkE2AU&quot;,
+      &quot;Id&quot; : &quot;5TVVW0000000GuU4AU&quot;
+    }, {
+      &quot;UsageProductId&quot; : &quot;01tVW0000022VgtYAE&quot;,
+      &quot;ProductName&quot; : &quot;Error Logs&quot;,
+      &quot;Subtotal&quot; : &quot;$26.40&quot;,
+      &quot;Quantity&quot; : &quot;4&quot;,
+      &quot;Tax&quot; : &quot;$2.40&quot;,
+      &quot;CurrencyIsoCode&quot; : &quot;USD&quot;,
+      &quot;EndDate&quot; : &quot;04/24/2025&quot;,
+      &quot;StartDate&quot; : &quot;03/25/2025&quot;,
+      &quot;IsUsageBasedInvoiceLine&quot; : true,
+      &quot;UnitPrice&quot; : &quot;$0.00&quot;,
+      &quot;UsageOverageQuantity&quot; : &quot;0&quot;,
+      &quot;UnitOfMeasureId&quot; : &quot;0hEVW0000000HkB2AU&quot;,
+      &quot;Id&quot; : &quot;5TVVW0000000GuV4AU&quot;
+    }, {
+      &quot;UsageProductId&quot; : &quot;01tVW0000022VgtYAE&quot;,
+      &quot;ProductName&quot; : &quot;Error Logs&quot;,
+      &quot;Subtotal&quot; : &quot;$19.80&quot;,
+      &quot;Quantity&quot; : &quot;6&quot;,
+      &quot;Tax&quot; : &quot;$1.80&quot;,
+      &quot;CurrencyIsoCode&quot; : &quot;USD&quot;,
+      &quot;EndDate&quot; : &quot;05/24/2025&quot;,
+      &quot;StartDate&quot; : &quot;04/25/2025&quot;,
+      &quot;IsUsageBasedInvoiceLine&quot; : true,
+      &quot;UnitPrice&quot; : &quot;$0.00&quot;,
+      &quot;UsageOverageQuantity&quot; : &quot;0&quot;,
+      &quot;UnitOfMeasureId&quot; : &quot;0hEVW0000000HkB2AU&quot;,
+      &quot;Id&quot; : &quot;5TVVW0000000GuW4AU&quot;
+    }, {
+      &quot;UsageProductId&quot; : &quot;01tVW0000022VgtYAE&quot;,
+      &quot;ProductName&quot; : &quot;API Calls&quot;,
+      &quot;Subtotal&quot; : &quot;$46.20&quot;,
+      &quot;Quantity&quot; : &quot;5&quot;,
+      &quot;Tax&quot; : &quot;$4.20&quot;,
+      &quot;CurrencyIsoCode&quot; : &quot;USD&quot;,
+      &quot;EndDate&quot; : &quot;04/24/2025&quot;,
+      &quot;StartDate&quot; : &quot;03/25/2025&quot;,
+      &quot;IsUsageBasedInvoiceLine&quot; : true,
+      &quot;UnitPrice&quot; : &quot;$0.00&quot;,
+      &quot;UsageOverageQuantity&quot; : &quot;0&quot;,
+      &quot;UnitOfMeasureId&quot; : &quot;0hEVW0000000HkC2AU&quot;,
+      &quot;Id&quot; : &quot;5TVVW0000000GuX4AU&quot;
+    } ]
+  },
+  &quot;CompanyEmail&quot; : &quot;shipramittal@salesforce.com&quot;,
+  &quot;CompanyState&quot; : &quot;CA&quot;,
+  &quot;CurrencyIsoCode&quot; : &quot;USD&quot;,
+  &quot;SubTotal&quot; : &quot;$370.00&quot;,
+  &quot;CompanyStreet&quot; : &quot;1 Market St&quot;,
+  &quot;Logo&quot; : &quot;069VW000000ARq9YAG&quot;,
+  &quot;CompanyName&quot; : &quot;salesforce&quot;,
+  &quot;TotalAmnt&quot; : &quot;$407.00&quot;,
+  &quot;TotalTax&quot; : &quot;$37.00&quot;,
+  &quot;TotalTaxesCapturedAtHeader&quot; : &quot;$37.00&quot;,
+  &quot;InvoiceDueDate&quot; : &quot;04/24/2025&quot;,
+  &quot;CompanyPostalCode&quot; : &quot;94105&quot;,
+  &quot;InvoiceDate&quot; : &quot;03/25/2025&quot;,
+  &quot;InvoiceNumber&quot; : &quot;DOC-000000002&quot;,
+  &quot;CompanyCity&quot; : &quot;San Francisco&quot;,
+  &quot;AccountName&quot; : &quot;usage test&quot;,
+  &quot;CompanyCountry&quot; : &quot;US&quot;
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <targetOutputFileName>DefaultInvoiceTemplate(Version 1)</targetOutputFileName>
+    <type>Transform</type>
+    <uniqueName>BillingDocumentGenerationTransformInvoiceDetails_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

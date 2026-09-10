@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AccountPlanObjMeasCalcDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <conditions>
+        <fieldName>Status</fieldName>
+        <operation>NotEqual</operation>
+        <value>Inactive</value>
+    </conditions>
+    <description>Defina objetivos de receita de taxas. O valor do objetivo atual é a soma dos campos Total de taxas esperadas dos acordos financeiros selecionados que não têm um estado &apos;Inativo&apos;.</description>
+    <developerName>Crescimento_de_taxas_do_acordo_financeiro</developerName>
+    <masterLabel>Crescimento de taxas do acordo financeiro</masterLabel>
+    <rollupType>Sum</rollupType>
+    <status>Active</status>
+    <targetField>TotalExpectedFee</targetField>
+    <targetObject>FinancialDeal</targetObject>
+</AccountPlanObjMeasCalcDef>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ViaStatus__c</fullName>
+    <description>Situacao da via, cota ou posicao: ativa, cancelada ou bloqueada. Itens cancelados e bloqueados permanecem listados e selecionaveis (EL-04, EL-05, Cenario 18).</description>
+    <inlineHelpText>Situacao do item: itens cancelados e bloqueados continuam selecionaveis.</inlineHelpText>
+    <label>Situacao da Via</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ativo</fullName>
+                <default>true</default>
+                <label>Ativo</label>
+            </value>
+            <value>
+                <fullName>Cancelado</fullName>
+                <default>false</default>
+                <label>Cancelado</label>
+            </value>
+            <value>
+                <fullName>Bloqueado</fullName>
+                <default>false</default>
+                <label>Bloqueado</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

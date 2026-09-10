@@ -1,0 +1,38 @@
+.c-drawer-desc {
+    color: #5c5c5c;
+}
+
+.c-via-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    cursor: pointer;
+    text-align: left;
+}
+
+.c-via-card_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.c-via-card_bandeira {
+    font-weight: 700;
+}
+
+.c-via-card_final {
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+}
+
+.c-via-card_portador {
+    font-size: 0.875rem;
+}
+
+.c-via-card_rodape {
+    font-size: 0.875rem;
+}

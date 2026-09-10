@@ -1,0 +1,10 @@
+.c-skeleton-bar {
+    height: 0.75rem;
+    border-radius: 0.25rem;
+    background: #e5e5e5;
+    margin-top: 0.5rem;
+}
+
+.c-skeleton-bar_titulo {
+    height: 1.25rem;
+}

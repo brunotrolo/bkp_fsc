@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Catalogo configuravel de tipos de produto exibidos no hub (PT, RN-12). Adicionar um registro aqui cria um novo cartao no hub sem deploy de LWC. Unico metadado novo de dominio desta capacidade.</description>
+    <label>Catalogo de Produtos</label>
+    <pluralLabel>Catalogo de Produtos</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,49 @@
+.c-tags_titulo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+}
+
+.c-tags_titulo-icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.25rem;
+    background: #066afe;
+}
+
+.c-tags_busca {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.c-tags_busca-cat {
+    min-width: 10rem;
+    flex: 1 1 auto;
+}
+
+.c-tags_busca-texto {
+    flex: 2 1 auto;
+}
+
+.c-tags_grupo {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #032d60;
+    text-transform: uppercase;
+}
+
+.c-tags_pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-top: 0.25rem;
+}

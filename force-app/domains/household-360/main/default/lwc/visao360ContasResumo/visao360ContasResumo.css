@@ -1,0 +1,11 @@
+.c-cresumo_rotulo {
+    font-size: 0.75rem;
+    color: #5c5c5c;
+    text-transform: uppercase;
+}
+
+.c-cresumo_valor {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #032d60;
+}

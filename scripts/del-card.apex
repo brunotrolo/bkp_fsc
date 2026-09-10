@@ -1,0 +1,1 @@
+List<OmniUiCard> cards = [SELECT Id, Name, IsActive FROM OmniUiCard WHERE Name = 'visaoHeader360' ORDER BY CreatedDate]; System.debug('FOUND=' + cards.size()); for(OmniUiCard c : cards){ System.debug('pre ' + c.Id + ' active=' + c.IsActive); c.IsActive = false; } update cards; delete cards; System.debug('DELETED=' + cards.size());

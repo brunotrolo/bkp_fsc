@@ -1,0 +1,1 @@
+List<OmniUiCard> cards = [SELECT Id FROM OmniUiCard WHERE Name = 'visaoHeader360']; delete cards; System.debug('DELETED=' + cards.size());

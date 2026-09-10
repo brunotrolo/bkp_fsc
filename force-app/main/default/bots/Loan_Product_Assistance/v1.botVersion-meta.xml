@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BotVersion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>v1</fullName>
+    <articleAnswersGPTEnabled>false</articleAnswersGPTEnabled>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>This tool uses generative AI, which can produce inaccurate or harmful responses.
+Hi! I&apos;m your loan product assistance AI agent. I can help you find loan products tailored to your needs! I don’t always get things right, so review my messages for accuracy. The information I provide isn&apos;t a loan commitment or an offer. Loan terms, rates, fees, and availability are subject to change without notice and may vary based on individual circumstances and creditworthiness. To get the most accurate and personalized loan information, contact our loan specialists or review the official loan documents. How can I help you today?</message>
+                <messageIdentifier>9923b360-68d6-4e25-835c-b538a4181868</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>36a657d7-3376-4b5a-8c26-7ea53ecb97b3</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier>ed8811a8-e8c2-4ce4-aa1e-c17322f8d554</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Welcome</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Hi! I&apos;m your helpful bot.</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Something went wrong. Try again.</message>
+                <messageIdentifier>c7dfd7c2-0b76-4286-a441-71dc6c024407</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>c8f106dc-eb3f-4175-b040-1a40ddf0e06e</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier>49c71b01-ef7c-4809-9021-93d96c4c2c18</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Error_Handling</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Unfortunately, a system error occurred. Let us start again.</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Hold on. I’m transferring our chat to get you more help.</message>
+                <messageIdentifier>cb603801-a8df-45f4-a05d-08c4acf6e08c</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>b726ed52-faa9-471e-ac29-55df67d82b18</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <conversationSystemMessage>
+                <type>Transfer</type>
+            </conversationSystemMessage>
+            <stepIdentifier>1e757fa8-7ed0-40c3-b25a-d3f47680952e</stepIdentifier>
+            <type>SystemMessage</type>
+        </botSteps>
+        <developerName>Transfer_To_Agent</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Transfer To Agent</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <citationsEnabled>false</citationsEnabled>
+    <company>Cumulus Bank</company>
+    <conversationDefinitionPlanners>
+        <genAiPlannerName>Loan_Product_Assistance</genAiPlannerName>
+    </conversationDefinitionPlanners>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>This variable may also be referred to as VerifiedCustomerId</description>
+        <developerName>VerifiedCustomerId</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>VerifiedCustomerId</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <defaultStdObjForContactIdFltrEnabled>false</defaultStdObjForContactIdFltrEnabled>
+    <entryDialog>Welcome</entryDialog>
+    <intentDisambiguationEnabled>false</intentDisambiguationEnabled>
+    <intentV3Enabled>false</intentV3Enabled>
+    <isScriptCompatibleAgent>false</isScriptCompatibleAgent>
+    <knowledgeActionEnabled>false</knowledgeActionEnabled>
+    <knowledgeFallbackEnabled>false</knowledgeFallbackEnabled>
+    <role>You’re a loan product assistance agent, assisting users to discover different loan products. Mark any question that’s not related to loan products as off-topic and do not respond to it. Focus exclusively on products related to loans.</role>
+    <smallTalkEnabled>false</smallTalkEnabled>
+    <staticPromptsEnabled>false</staticPromptsEnabled>
+    <stopRecPrompts>false</stopRecPrompts>
+    <stopWelcomePrompts>false</stopWelcomePrompts>
+    <surfacesEnabled>false</surfacesEnabled>
+    <toneType>Casual</toneType>
+</BotVersion>

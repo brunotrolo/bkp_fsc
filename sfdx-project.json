@@ -1,0 +1,20 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
+    },
+    {
+      "path": "force-app/domains/busca-cliente",
+      "default": false
+    },
+    {
+      "path": "force-app/domains/household-360",
+      "default": false
+    }
+  ],
+  "name": "FSC",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "66.0"
+}

@@ -1,0 +1,1 @@
+{"dataSource":{"type":"ApexRemote","value":{"dsDelay":"","remoteClass":"Visao360FlexCardDS","remoteMethod":"getHeader","vlocityAsync":false,"inputMap":{"recordId":"{recordId}"},"jsonMap":"{\"recordId\":\"{recordId}\"}"},"orderBy":{"name":"","isReverse":""},"contextVariables":[{"name":"recordId","val":"001Ws000061PPpDIAW","id":1}]}}

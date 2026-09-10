@@ -1,0 +1,63 @@
+.c-meta_topo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.c-meta_nome {
+    font-weight: 700;
+    color: #032d60;
+    text-decoration: underline;
+    flex: 1 1 auto;
+}
+
+.c-meta_chevron {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.c-meta_corpo {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.c-meta_dados {
+    flex: 2 1 auto;
+}
+
+.c-meta_rotulo {
+    font-size: 0.75rem;
+    color: #5c5c5c;
+    text-transform: uppercase;
+}
+
+.c-meta_valor {
+    color: #066afe;
+}
+
+.c-meta_donut {
+    position: relative;
+    width: 5.25rem;
+    height: 5.25rem;
+    flex: none;
+}
+
+.c-meta_donut svg {
+    width: 100%;
+    height: 100%;
+}
+
+.c-meta_pct {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #032d60;
+}
